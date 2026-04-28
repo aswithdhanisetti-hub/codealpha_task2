@@ -1,0 +1,221 @@
+/* Background behind the phone mock */
+.animated-gradient {
+    background: radial-gradient(circle at 50% 50%, #201a35 0%, #07060f 100%);
+}
+
+/* Gradient inside the app matching Dribbble */
+.app-inner-gradient {
+    background: radial-gradient(circle at top, rgba(79, 101, 198, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at bottom right, rgba(93, 44, 184, 0.3) 0%, transparent 60%);
+}
+
+/* Rotating Cover Animation */
+.rotate {
+  animation: spin 8s linear infinite;
+  border-radius: 50% !important; /* Adding this so it looks like a record when spinning */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Custom Range Input Styling for sleek look */
+.custom-range {
+    outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.2s ease;
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+    transform: scale(1.4);
+}
+
+.custom-range::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.2s ease;
+}
+
+.custom-range::-moz-range-thumb:hover {
+    transform: scale(1.4);
+}
+
+/* Clean up scrollbars if any */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Glassmorphism Button & Neon Effects */
+.btn-neon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    border-color: rgba(165, 180, 252, 0.4);
+}
+
+.btn-primary-neon {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary-neon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-primary-neon:hover::after {
+    opacity: 1;
+}
+
+.btn-primary-neon:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.6), 0 0 40px rgba(139, 92, 246, 0.4);
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Modal Activation */
+.modal-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.modal-active #login-modal-content {
+    transform: scale(1) !important;
+}
+
+/* Dropdown Activation */
+.dropdown-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
+
+/* Library Overlay */
+.library-open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Song Card */
+.song-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.song-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(4px);
+    border-color: rgba(165, 180, 252, 0.15);
+}
+
+.song-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.song-card .song-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.song-card .song-name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-card .song-artist {
+    color: rgba(165, 180, 252, 0.5);
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+.song-card .play-btn-small {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.song-card:hover .play-btn-small {
+    background: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Liked Heart Animation */
+.liked-active {
+    color: #f472b6 !important;
+}
+
+.liked-active i {
+    animation: heartPop 0.4s ease;
+}
+
+@keyframes heartPop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+}
+
+/* Toast Active */
+.toast-active {
+    opacity: 1 !important;
+    transform: translate(-50%, 0) !important;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: rgba(165, 180, 252, 0.4);
+    font-size: 0.95rem;
+}
