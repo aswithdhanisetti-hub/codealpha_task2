@@ -1,4 +1,4 @@
-# codealpha_task2
+
 This project is a responsive web-based Music Player built using HTML, Tailwind CSS and JavaScript. The application allows users to play and control audio tracks with a clean and modern user interface. It was developed to practice frontend development, DOM manipulation and working with audio in JavaScript.
 
 ✨ Features
